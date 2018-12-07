@@ -1,0 +1,9 @@
+.Navitem a{
+    text-decoration: none;
+    color: white;
+}
+.Navitem a:hover,
+.Navitem a:active{
+    color: lightgreen;
+}
+

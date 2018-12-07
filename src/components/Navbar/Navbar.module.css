@@ -1,0 +1,21 @@
+.Navbar{
+    border:2px solid black;
+    background-color: rebeccapurple;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+}
+
+.Navbar ul{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding-left:20px;
+    padding-right:20px;
+    height: 100%;
+}
+

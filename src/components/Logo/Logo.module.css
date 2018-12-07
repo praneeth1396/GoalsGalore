@@ -1,0 +1,8 @@
+.Logo{
+    height: 48px;
+    width: 48px;
+}
+.Logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
