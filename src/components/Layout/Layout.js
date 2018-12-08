@@ -8,7 +8,6 @@ class Layout extends Component{
         return (
             <Auxillary> 
                 <Navbar />
-                <Searchbar />
             </Auxillary>
         ); 
     }

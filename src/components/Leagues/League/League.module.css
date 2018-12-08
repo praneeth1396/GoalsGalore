@@ -1,0 +1,19 @@
+.League{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed darksalmon;
+    width:30%;
+}
+.League h4{
+    margin: 0px;
+    padding-top : 10px;
+}
+.League hr{
+    width: 100%;
+}
+.League ol{
+    padding: 0px;
+    list-style-type: none;
+}
