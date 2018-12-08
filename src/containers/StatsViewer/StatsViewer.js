@@ -18,7 +18,7 @@ class StatsViewer extends Component{
                     "name":"Germany",
                     "link":"www.bundesliga.com"
                 }
-            ]
+        ]
     };
 
     render(){
