@@ -1,40 +1,42 @@
 import React, { Component } from 'react';
 import classes from './League.module.css';
 import axios from 'axios'
+import Scorer from './Scorer/Scorer';
 
 class League extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            "scorers":[
-                    {
-                    "name":null,
-                    "apps":null,
-                    "goals":null
-                    }
-                ]
-        }
-    }
-    componentDidMount(){
-        axios.get('http://127.0.0.1:5000/')
-            .then((response) => {
-                console.log(response.data);
-            });
-    }
+    
     render(){
-        return (
+        this.topscorers = this.props.topscorers.map((scorer,index)=>{
+            return <Scorer key={scorer.player+"_"+(index+1)} scorer_info={scorer} />
+        }).slice(0,5); 
+        console.log("RENDER "+this.props.name);
+        let content = (
             <div className = {classes.League}>
                 <h4> {this.props.name} </h4>
                 <hr />
-                <ol>
-                    <li> One </li>
-                    <li> Two </li>
-                    <li> Three </li>
-                    <li> Four </li>
-                    <li> Five </li>
-                </ol>
+                <p> Loading ... </p>
+            </div>
+        );
+        content = (
+            <div className = {classes.League} onClick={this.props.clicked}>
+                <h4> {this.props.name} </h4>
+                <hr />
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Player </th>
+                            <th> Club </th>
+                            <th> Goals </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.topscorers}
+                    </tbody>
+                </table>
             </div> 
         );
+        
+        return content;
     }
 }
 

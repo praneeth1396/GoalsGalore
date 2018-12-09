@@ -1,6 +1,7 @@
 .Leagues{
     display: flex;
+    flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 136px;
 }

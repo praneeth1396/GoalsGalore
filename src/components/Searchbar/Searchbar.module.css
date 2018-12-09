@@ -1,13 +1,13 @@
 .Searchbar{
-    margin-top:96px;
     width:40%;
     border: 3px solid grey;
     border-radius: 18px;
     display:flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
     left:50%;
+    top: 96px;
     transform: translateX(-50%);
     height:40px;
 }

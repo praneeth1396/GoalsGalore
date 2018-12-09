@@ -3,8 +3,14 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    border: 2px dashed darksalmon;
-    width:30%;
+    width: 75%;
+    margin: 15px;
+    box-shadow: 5px 5px 8px 2px lightgray;
+    cursor: pointer;    
+    transition: all 0.5s ease-in-out;
+}
+.League:hover{
+    transform: scale(1.1,1.1);
 }
 .League h4{
     margin: 0px;

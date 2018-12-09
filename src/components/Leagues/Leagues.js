@@ -2,17 +2,29 @@ import React, { Component } from 'react';
 import League from './League/League';
 import Auxillary from '../../hoc/Auxillary/Auxillary';
 import classes from './Leagues.module.css';
+import Modal from '../UI/Modal/Modal';
 
 class Leagues extends Component{
-    
+
+    viewCompDetailsHandler = (leagueName) => {
+        console.log("LEAGUES "+leagueName);
+        this.setState({"showComprehensive":true});
+    }
+
+    closeModalHandler = () => {
+        this.setState({"showComprehensive":false});
+    }
+
     render(){
-        const all_leagues = this.props.allleagues.map((league,index) => {
-            return <League key={league.name+"_"+index} name={league.name} link={league.link} />
-        });
+        let modal = null;
+        if(this.state.showComprehensive)
+            modal = <Modal closeModal={this.closeModalHandler} />;
         return (
-            <div className={classes.Leagues}>
-                {all_leagues}
-            </div>
+            <Auxillary>
+                <div className={classes.Leagues}>
+                    {modal}  
+                </div>
+            </Auxillary>
         );
     }
 }

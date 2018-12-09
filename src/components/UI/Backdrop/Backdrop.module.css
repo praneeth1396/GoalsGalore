@@ -1,0 +1,10 @@
+.Backdrop{
+    background-color: lightgrey;
+    opacity: 0.5;
+    z-index: 150;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:80px;
+    left:0px;
+}
